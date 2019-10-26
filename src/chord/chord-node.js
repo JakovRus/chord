@@ -79,7 +79,11 @@ export class ChordNode {
       }
 
       if(this.in_interval(id, i)) {
-        return id > finger.node ? finger.node.find_successor(id) : finger.node;
+        if(id < this.id) {
+          return this;
+        }
+
+        return id > this.get_successor_id(finger.node) ? finger.node.find_successor(id) : finger.node;
       }
     }
   };
@@ -98,5 +102,9 @@ export class ChordNode {
     return start < end ?
       (id > start && id < end):
       ((id > start && id < this.size) || (id >= 0 && id < end));
+  };
+
+  get_successor_id = (node) => {
+    return node.id ? node.id : this.size;
   }
 }
