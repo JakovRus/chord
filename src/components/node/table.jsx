@@ -6,11 +6,13 @@ export function FingerTable(props) {
 
   return (
     <table className='finger-table'>
-      <tr>
-        <th>start</th>
-        <th>interval</th>
-        <th>node</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>start</th>
+          <th>interval</th>
+          <th>node</th>
+        </tr>
+      </thead>
       <Fingers node={node}/>
     </table>
   );
@@ -26,7 +28,7 @@ function Fingers(props) {
     return <Finger finger={finger} end={end} key={index} />
   });
 
-  return <>{fingers}</>
+  return <tbody>{fingers}</tbody>
 }
 
 function Finger(props) {
