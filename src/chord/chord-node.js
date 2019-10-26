@@ -5,12 +5,23 @@ export class ChordNode {
     this.table = [];
 
     for(let i = 0; i < m; i++) {
-      this.table[i].node = this;
+      const finger = {
+        node: this,
+        start: id + Math.pow(2, i),
+      };
+
+      this.table.push(finger);
     }
 
     this.predecessor = this;
     this.successor = this;
   }
+
+  leave = () => {
+    this.successor.predecessor = this.predecessor;
+    this.predecessor.successor = this.successor;
+    this.update_others();
+  };
 
   // node: ChordNode | undefined;
   join = (node) => {
@@ -31,7 +42,7 @@ export class ChordNode {
     this.predecessor = this.successor.predecessor;
     this.successor.predecessor = this;
 
-    for(let i = 0; i < this.m - 1; i++) {
+    for(let i = 1; i < this.m; i++) {
       const finger = this.table[i];
       const prev_finger = this.table[i - 1];
 
