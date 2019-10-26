@@ -4,7 +4,6 @@
     <list default="true" id="fbcb9f8f-5ad1-4c3d-bbd1-e2d50eeb0f6f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chord/chord-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/chord/chord-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/node/neighbors.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/node/neighbors.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chord/chord-node.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+            <state relative-caret-position="173">
+              <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -68,9 +67,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="841" />
-    <option name="width" value="1063" />
-    <option name="height" value="1000" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -120,7 +119,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572105831972" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572118862821" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="C:\Users\jakov\IdeaProjects\chord\node_modules\eslint" />
@@ -168,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572067585267</updated>
       <workItem from="1572067588636" duration="3444000" />
-      <workItem from="1572087998161" duration="13211000" />
+      <workItem from="1572087998161" duration="23208000" />
     </task>
     <task id="LOCAL-00001" summary="added Finger &amp; ChordNode classes">
       <created>1572088970833</created>
@@ -205,17 +204,24 @@
       <option name="project" value="LOCAL" />
       <updated>1572104635765</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed node id's exceed 2^m">
+      <created>1572105928368</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572105928368</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16655000" />
+    <option name="totallyTimeSpent" value="26652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23987207" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.49234137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -295,7 +301,8 @@
     <MESSAGE value="added initialization of start fields in finger table;&#10;added leave method;" />
     <MESSAGE value="added react components" />
     <MESSAGE value="fixed warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed warnings" />
+    <MESSAGE value="fixed node id's exceed 2^m" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed node id's exceed 2^m" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/chord/finger.js">
@@ -414,8 +421,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chord/chord-node.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        <state relative-caret-position="173">
+          <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
         </state>
       </provider>
     </entry>

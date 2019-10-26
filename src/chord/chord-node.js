@@ -1,13 +1,14 @@
 export class ChordNode {
   constructor(m, id) {
     this.m = m;
+    this.size = Math.pow(2, m);
     this.id = id;
     this.table = [];
 
     for(let i = 0; i < m; i++) {
       const finger = {
         node: this,
-        start: (id + Math.pow(2, i)) % Math.pow(2, m),
+        start: (id + Math.pow(2, i)) % this.size,
       };
 
       this.table.push(finger);
@@ -23,7 +24,6 @@ export class ChordNode {
     this.update_others();
   };
 
-  // node: ChordNode | undefined;
   join = (node) => {
     if(!node) {
       return;
@@ -33,13 +33,13 @@ export class ChordNode {
     this.update_others();
   };
 
-  // node: ChordNode | undefined;
   init_table = (node) => {
     const first_finger = this.table[0];
     first_finger.node = node.find_successor(first_finger.start);
-    this.successor = first_finger.node;
 
+    this.successor = first_finger.node;
     this.predecessor = this.successor.predecessor;
+
     this.successor.predecessor = this;
     this.predecessor.successor = this;
 
@@ -57,9 +57,9 @@ export class ChordNode {
 
   update_others = () => {
     for(let i = 0; i < this.m; i++) {
-      const id = this.id - Math.pow(2, i);
+      const id = (this.size + this.id - Math.pow(2, i)) % this.size;
       const predecessor = this.find_predecessor(id);
-      predecessor.update_finger_table(this.id, i);
+      predecessor.update_finger_table(this, i);
     }
   };
 
@@ -71,31 +71,32 @@ export class ChordNode {
   };
 
   find_successor = (id) => {
-    const predecessor = this.find_predecessor(id);
-    return predecessor.successor;
+    for(let i = 0; i < this.m; i++) {
+      const finger = this.table[i];
+
+      if(finger.start === id) {
+        return finger.node;
+      }
+
+      if(this.in_interval(id, i)) {
+        return id > finger.node ? finger.node.find_successor(id) : finger.node;
+      }
+    }
   };
 
   find_predecessor = (id) => {
-    let node = this;
-    while(id <= node.id || id > node.successor.id) {
-      const finger = node.closest_preceding_finger(id);
-
-      if(finger.id === node.id) {
-        return finger;
-      }
-    }
-
-    return node;
+    return this.find_successor(id).predecessor;
   };
 
-  closest_preceding_finger = (id) => {
-    for(let i = this.m - 1; i >= 0; i--) {
-      const finger = this.table[i].node;
-      if(finger.id > this.id && finger.id < id) {
-        return finger;
-      }
-    }
+  in_interval = (id, i) => {
+    const finger = this.table[i];
+    const next_finger = this.table[i + 1];
 
-    return this;
+    const start = finger.start;
+    const end = next_finger ? next_finger.start : this.id;
+
+    return start < end ?
+      (id > start && id < end):
+      ((id > start && id < this.size) || (id >= 0 && id < end));
   }
 }
