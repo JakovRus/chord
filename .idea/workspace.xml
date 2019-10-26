@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chord/chord-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/chord/chord-node.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/node/neighbors.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/node/neighbors.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/node/table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/node/table.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,28 +15,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chord/chord-node.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="243">
+              <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/node/neighbors.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="18" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/node/table.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="659">
@@ -74,9 +61,9 @@
         <option value="$PROJECT_DIR$/src/components/node/neighbours.jsx" />
         <option value="$PROJECT_DIR$/src/components/node/node.jsx" />
         <option value="$PROJECT_DIR$/src/components/node/styles.css" />
-        <option value="$PROJECT_DIR$/src/chord/chord-node.js" />
-        <option value="$PROJECT_DIR$/src/components/node/neighbors.jsx" />
         <option value="$PROJECT_DIR$/src/components/node/table.jsx" />
+        <option value="$PROJECT_DIR$/src/components/node/neighbors.jsx" />
+        <option value="$PROJECT_DIR$/src/chord/chord-node.js" />
       </list>
     </option>
   </component>
@@ -133,7 +120,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572104495918" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572105831972" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="C:\Users\jakov\IdeaProjects\chord\node_modules\eslint" />
@@ -181,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572067585267</updated>
       <workItem from="1572067588636" duration="3444000" />
-      <workItem from="1572087998161" duration="11876000" />
+      <workItem from="1572087998161" duration="13211000" />
     </task>
     <task id="LOCAL-00001" summary="added Finger &amp; ChordNode classes">
       <created>1572088970833</created>
@@ -211,11 +198,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572104282453</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed warnings">
+      <created>1572104635764</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572104635765</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15320000" />
+    <option name="totallyTimeSpent" value="16655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -300,7 +294,8 @@
     <MESSAGE value="fixed infinite loop in lookup method" />
     <MESSAGE value="added initialization of start fields in finger table;&#10;added leave method;" />
     <MESSAGE value="added react components" />
-    <option name="LAST_COMMIT_MESSAGE" value="added react components" />
+    <MESSAGE value="fixed warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed warnings" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/chord/finger.js">
@@ -397,23 +392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chord/chord-node.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/node/neighbors.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/node/table.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
@@ -421,6 +399,23 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/node/neighbors.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chord/chord-node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
         </state>
       </provider>
     </entry>

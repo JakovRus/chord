@@ -8,14 +8,14 @@ export function Neighbors(props) {
     <table className='neighbors-table'>
       <thead>
         <tr>
-          <th>successor</th>
           <th>predecessor</th>
+          <th>successor</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{node.successor.id}</td>
           <td>{node.predecessor.id}</td>
+          <td>{node.successor.id}</td>
         </tr>
       </tbody>
     </table>

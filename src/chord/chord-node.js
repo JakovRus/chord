@@ -7,7 +7,7 @@ export class ChordNode {
     for(let i = 0; i < m; i++) {
       const finger = {
         node: this,
-        start: id + Math.pow(2, i),
+        start: (id + Math.pow(2, i)) % Math.pow(2, m),
       };
 
       this.table.push(finger);
@@ -41,6 +41,7 @@ export class ChordNode {
 
     this.predecessor = this.successor.predecessor;
     this.successor.predecessor = this;
+    this.predecessor.successor = this;
 
     for(let i = 1; i < this.m; i++) {
       const finger = this.table[i];
@@ -70,7 +71,8 @@ export class ChordNode {
   };
 
   find_successor = (id) => {
-    return this.find_predecessor(id).successor;
+    const predecessor = this.find_predecessor(id);
+    return predecessor.successor;
   };
 
   find_predecessor = (id) => {
