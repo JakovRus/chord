@@ -21,7 +21,16 @@ export class ChordNode {
   leave = () => {
     this.successor.predecessor = this.predecessor;
     this.predecessor.successor = this.successor;
-    this.predecessor.update_others();
+
+    for(let i = 0; i < this.m; i++) {
+      const id = (this.size + this.id - Math.pow(2, i)) % this.size;
+      const predecessor = this.find_predecessor(id);
+      predecessor.table.forEach(finger => {
+        if(finger.node === this) {
+          finger.node = this.successor;
+        }
+      });
+    }
   };
 
   join = (node) => {
