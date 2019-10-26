@@ -65,7 +65,11 @@ export class ChordNode {
   find_predecessor = (id) => {
     let node = this;
     while(id <= node.id || id > node.successor.id) {
-      node = node.closest_preceding_finger(id);
+      const finger = node.closest_preceding_finger(id);
+
+      if(finger.id === node.id) {
+        return finger;
+      }
     }
 
     return node;

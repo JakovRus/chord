@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbcb9f8f-5ad1-4c3d-bbd1-e2d50eeb0f6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chord/chord-node.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chord/finger.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chord/chord-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/chord/chord-node.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chord/chord-node.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="360">
+              <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -74,32 +71,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="chord" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chord" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chord" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chord" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chord" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chord" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="chord" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -152,12 +124,20 @@
       <option name="presentableId" value="Default" />
       <updated>1572067585267</updated>
       <workItem from="1572067588636" duration="3444000" />
-      <workItem from="1572087998161" duration="716000" />
+      <workItem from="1572087998161" duration="2697000" />
     </task>
+    <task id="LOCAL-00001" summary="added Finger &amp; ChordNode classes">
+      <created>1572088970833</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572088970833</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4160000" />
+    <option name="totallyTimeSpent" value="6141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="841" y="0" width="1063" height="1000" extended-state="0" />
@@ -237,6 +217,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added Finger &amp; ChordNode classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Finger &amp; ChordNode classes" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -259,8 +243,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chord/chord-node.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="360">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
         </state>
       </provider>
     </entry>
