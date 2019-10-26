@@ -21,7 +21,7 @@ export class ChordNode {
   leave = () => {
     this.successor.predecessor = this.predecessor;
     this.predecessor.successor = this.successor;
-    this.update_others();
+    this.predecessor.update_others();
   };
 
   join = (node) => {
@@ -64,7 +64,12 @@ export class ChordNode {
   };
 
   update_finger_table = (node, i) => {
-    if(node.id >= this.id && node.id < this.table[i].node.id) {
+    if(node === this) {
+      return;
+    }
+
+    if(this.compare(node.id, this.table[i].start, this.table[i].node.id) ||
+       node.id === this.table[i].start) {
       this.table[i].node = node;
       this.predecessor.update_finger_table(node, i);
     }
@@ -99,6 +104,10 @@ export class ChordNode {
     const start = finger.start;
     const end = next_finger ? next_finger.start : this.id;
 
+    return this.compare(id, start, end);
+  };
+
+  compare = (id, start, end) => {
     return start < end ?
       (id > start && id < end):
       ((id > start && id < this.size) || (id >= 0 && id < end));
