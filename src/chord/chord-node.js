@@ -65,25 +65,34 @@ export class ChordNode {
   };
 
   update_others = () => {
-    for(let i = 0; i < this.m; i++) {
-      const id = (this.size + this.id - Math.pow(2, i)) % this.size;
-      const predecessor = this.find_predecessor(id);
-      predecessor.update_finger_table(this, i);
-    }
+    const ids = this.get_ids(this.predecessor.id);
+    this.predecessor.update_finger_table(this);
+    
+    ids.forEach(id => {
+      for(let i = 0; i < this.m; i++) {
+        const key = (this.size + id - Math.pow(2, i)) % this.size;
+        const predecessor = this.find_predecessor(key);
+
+        if(predecessor.id !== key) {
+          continue;
+        }
+
+        predecessor.update_finger_table(this);
+      }
+    });
   };
 
-  update_finger_table = (node, i) => {
+  update_finger_table = (node) => {
     if(node === this) {
       return;
     }
 
-    if (
-      this.compare(node.id, this.table[i].start, this.table[i].node.id) ||
-      node.id === this.table[i].start
-    ) {
-      this.table[i].node = node;
-      this.predecessor.update_finger_table(node, i);
-    }
+    this.table.forEach(finger => {
+      if(this.compare(finger.start, node.predecessor.id, node.id) || node.id === finger.start) {
+        finger.node = node;
+        this.predecessor.update_finger_table(node);
+      }
+    });
   };
 
   find_successor = (id) => {
@@ -130,5 +139,15 @@ export class ChordNode {
 
   get_successor_id = (node) => {
     return node.id ? node.id : this.size;
+  };
+
+  get_ids = (predecessor_id) => {
+    if(predecessor_id > this.id) {
+      return Array.from({length: this.size - 1 - predecessor_id},
+        (v, i) => this.size + 1 + i- predecessor_id)
+        .concat[Array.from({length: this.id}, (v, i) => i)];
+    } else {
+      return Array.from({length: this.id - predecessor_id - 1}, (v, i) => predecessor_id + 1 + i);
+    }
   }
 }
