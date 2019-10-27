@@ -67,7 +67,7 @@ export class ChordNode {
   update_others = () => {
     const ids = this.get_ids(this.predecessor.id);
     this.predecessor.update_finger_table(this);
-    
+
     ids.forEach(id => {
       for(let i = 0; i < this.m; i++) {
         const key = (this.size + id - Math.pow(2, i)) % this.size;
@@ -145,7 +145,7 @@ export class ChordNode {
     if(predecessor_id > this.id) {
       return Array.from({length: this.size - 1 - predecessor_id},
         (v, i) => this.size + 1 + i- predecessor_id)
-        .concat[Array.from({length: this.id}, (v, i) => i)];
+        .concat(Array.from({length: this.id}, (v, i) => i));
     } else {
       return Array.from({length: this.id - predecessor_id - 1}, (v, i) => predecessor_id + 1 + i);
     }
