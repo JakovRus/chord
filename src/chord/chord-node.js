@@ -96,11 +96,16 @@ export class ChordNode {
   };
 
   find_successor = (id) => {
+    if(this.id === id) {
+      return this;
+    }
+
+
     for(let i = 0; i < this.m; i++) {
       const finger = this.table[i];
 
-      if(this.id === id) {
-        return this;
+      if(finger.node.id < finger.start) {
+        return finger.node;
       }
 
       if(finger.start === id) {
